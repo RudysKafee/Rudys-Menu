@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Rudy's Kafee</title>
+    <link rel="stylesheet" href="style.css?v=22">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar modo oscuro">🌙</button>
+
+    <!-- Header y Navegación -->
+    <header class="header">
+        <div class="nav-content">
+            <div class="logo-area">
+                <a href="inicio.html"><img src="LogoPNG.png" alt="Rudy's Kafee" class="logo-imagen"></a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="inicio.html" style="color: var(--color-turquesa); font-weight: bold;">Inicio</a></li>
+                    <li><a href="index.html">Menús</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="content-container">
+            
+            <!-- ========================================================= -->
+            <!-- SECCIÓN 1: BIENVENIDA CON VIDEO VERTICAL -->
+            <!-- ========================================================= -->
+            <div class="hero-split">
+                
+                <!-- LADO IZQUIERDO: VIDEO VERTICAL (.MP4) -->
+                <div class="hero-video-container">
+                    <video src="video Rudys.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+                </div>
+
+                <!-- LADO DERECHO: TEXTO DE BIENVENIDA -->
+                <div class="hero-text-container">
+                    <img src="LogoPNG.png" alt="Rudy's Kafee" class="hero-logo-img">
+                    <h2 class="hero-title">TE DA LA BIENVENIDA</h2>
+                    
+                    <p class="hero-desc">
+                        Una historia llena de tradición y sabor.<br><br>
+                        Somos una cafetería especializada en crear momentos únicos. Queremos que la gente disfrute la compañía de sus seres queridos y el mejor café de Ciudad Juárez.
+                    </p>
+                    
+                    <a href="index.html" style="text-decoration: none;">
+                        <button class="btn-primary">VER MENÚ DIGITAL</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ========================================================= -->
+            <!-- SECCIÓN 2: DESTACADOS DEL MENÚ -->
+            <!-- ========================================================= -->
+            <div class="highlights-section">
+                <h2 class="section-title">Menú</h2>
+                <p class="highlights-desc">
+                    Explora nuestro menú diverso y descubre una variedad de opciones que se adaptan a todos los gustos y momentos. Desde exquisitos desayunos hasta cenas reconfortantes, pasando por una selección única de bebidas.
+                </p>
+
+                <!-- GRID DE 3 COLUMNAS -->
+                <div class="highlights-grid">
+                    
+                    <!-- Destacado 1 -->
+                    <a href="index.html" class="highlight-card">
+                        <div class="highlight-img-wrapper">
+                            <img src="brunch/PanHuevo.jpeg" alt="Desayunos">
+                        </div>
+                        <h3 class="highlight-title">DESAYUNO | BRUNCH</h3>
+                        <p class="highlight-text">Desayunos y brunches que fusionan sabores clásicos y creativos para transformar tus mañanas.</p>
+                    </a>
+
+                    <!-- Destacado 2 -->
+                    <a href="index.html" class="highlight-card">
+                        <div class="highlight-img-wrapper">
+                            <img src="fuerte/RibEye.jpeg" alt="Comidas">
+                        </div>
+                        <h3 class="highlight-title">COMIDAS | CENAS</h3>
+                        <p class="highlight-text">Disfruta de un festín culinario con ingredientes de la más alta calidad y un sabor inigualable.</p>
+                    </a>
+
+                    <!-- Destacado 3 -->
+                    <a href="index.html" class="highlight-card">
+                        <div class="highlight-img-wrapper">
+                            <img src="french/FrenchRudys.jpeg" alt="Postres">
+                        </div>
+                        <h3 class="highlight-title">POSTRES | BAKERY</h3>
+                        <p class="highlight-text">Una deliciosa sinfonía de texturas y sabores que elevan el arte de lo dulce y la repostería.</p>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Simple -->
+    <footer class="footer">
+        <div class="footer-bottom" style="margin-top: 0; padding-top: 0; border: none;">
+            <p>© 2026 RUDY'S KAFEE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts básicos -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        menuToggle.addEventListener('click', () => { mainNav.classList.toggle('active'); });
+
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if(document.body.classList.contains('dark-mode')) {
+                themeToggle.innerText = '☀️';
+            } else {
+                themeToggle.innerText = '🌙';
+            }
+        });
+    </script>
+</body>
+</html>
