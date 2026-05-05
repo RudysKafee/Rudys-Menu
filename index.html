@@ -614,13 +614,13 @@
         function renderView() {
             const currentView = historyStack[historyStack.length - 1];
             
-            // 1. Ocultar todas las pantallas
+            // Ocultar todas las pantallas
             document.querySelectorAll('.view-section').forEach(v => v.classList.remove('active'));
             
-            // 2. Mostrar la pantalla actual
+            // Mostrar la pantalla actual
             document.getElementById(currentView).classList.add('active');
 
-            // 3. Mostrar u ocultar el botón "Volver" (Flecha)
+            // Mostrar u ocultar el botón "Volver" (Flecha)
             const backBtn = document.getElementById('backBtn');
             if (historyStack.length > 1) {
                 backBtn.style.display = 'flex';
@@ -628,14 +628,14 @@
                 backBtn.style.display = 'none';
             }
 
-            // 4. Cambiar el tema visual si está en cualquier parte de bebidas
+            // Cambiar el tema visual si está en cualquier parte de bebidas
             if (currentView.includes('bebidas')) {
                 document.body.classList.add('theme-bebidas');
             } else {
                 document.body.classList.remove('theme-bebidas');
             }
 
-            // 5. Subir la pantalla suavemente
+            // Subir la pantalla suavemente
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
