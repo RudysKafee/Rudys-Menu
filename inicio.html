@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio | Rudy's Kafee</title>
-    <link rel="stylesheet" href="style.css?v=22">
+    <!-- Actualicé a v=23 para asegurar que se refresquen los cambios -->
+    <link rel="stylesheet" href="style.css?v=23">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -36,17 +37,9 @@
     <main class="main-content">
         <div class="content-container">
             
-            <!-- ========================================================= -->
-            <!-- SECCIÓN 1: BIENVENIDA CON VIDEO VERTICAL -->
-            <!-- ========================================================= -->
             <div class="hero-split">
                 
-                <!-- LADO IZQUIERDO: VIDEO VERTICAL (.MP4) -->
-                <div class="hero-video-container">
-                    <video src="video Rudys.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
-                </div>
-
-                <!-- LADO DERECHO: TEXTO DE BIENVENIDA -->
+                <!-- LADO IZQUIERDO: TEXTO DE BIENVENIDA -->
                 <div class="hero-text-container">
                     <img src="LogoPNG.png" alt="Rudy's Kafee" class="hero-logo-img">
                     <h2 class="hero-title">TE DA LA BIENVENIDA</h2>
@@ -57,14 +50,17 @@
                     </p>
                     
                     <a href="index.html" style="text-decoration: none;">
-                        <button class="btn-primary">VER MENÚ DIGITAL</button>
+                        <button class="btn-primary">VER MENÚ</button>
                     </a>
                 </div>
+
+                <!-- LADO DERECHO: VIDEO VERTICAL (.MP4) -->
+                <div class="hero-video-container">
+                    <video src="video Rudys.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+                </div>
+
             </div>
 
-            <!-- ========================================================= -->
-            <!-- SECCIÓN 2: DESTACADOS DEL MENÚ -->
-            <!-- ========================================================= -->
             <div class="highlights-section">
                 <h2 class="section-title">Menú</h2>
                 <p class="highlights-desc">
@@ -107,7 +103,7 @@
         </div>
     </main>
 
-    <!-- Footer Simple -->
+    <!-- Footer Completo -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-column">
